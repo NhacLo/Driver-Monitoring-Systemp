@@ -11,7 +11,7 @@ How to run code :
                    -> Tao moi truong ROS2 tren windown.
                       - cd ... on folder of program detect.
                       - set ROS_DOMAIN_ID=30
-                      - python detect_function_test.py
+                      - python ver_test.py
      Step2 : 
       - Run server carla: CarLaEU4.exe.
       - Open another terminal Ubuntu : 
