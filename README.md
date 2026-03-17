@@ -36,3 +36,10 @@ In the **Windows terminal**, run:
 cd C:\pixi_ws
 pixi shell
 call C:\pixi_ws\ros2-windows\local_setup.bat
+### Step 2: Connect client with server.
+Open:
+-**Unbuntu Terminal
+In the **Unbuntu terminal**, run:
+'''bash
+source ~/carla-ros-bridge/install/setup.bash
+ros2 launch carla_ros_bridge carla_ros_bridge.launch.py synchronous_mode:=Fasle  host:=172.27.224.1 passive:=true
