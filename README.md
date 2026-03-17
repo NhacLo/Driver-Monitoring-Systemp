@@ -1,27 +1,38 @@
-In this project. The main goal is detect driver lack of focus and dozing off. 
-To run code : 
-   - Need : Dowload Carla 0.9.16 + API , ROS2
-How to run code :
-   Step1 : Open Terminal of CMD on windown.
-        Open Terminal of Ubuntu WSL
-           - At terminal of Windown : 
-                      - cd C:\pixi_ws
-                        pixi shell
-                      - call C:\pixi_ws\ros2-windows\local_setup.bat
-                   -> Tao moi truong ROS2 tren windown.
-                      - cd ... on folder of program detect.
-                      - set ROS_DOMAIN_ID=30
-                      - python ver_test.py
-     Step2 : 
-      - Run server carla: CarLaEU4.exe.
-      - Open another terminal Ubuntu : 
-                - run : source ~/carla-ros-bridge/install/setup.bash -> tao moi truong ros_bridge
-                - run : ros2 launch carla_ros_bridge carla_ros_bridge.launch.py synchronous_mode:=Fasle  host:=172.27.224.1 passive:=true
-     Step3 :
-       - Open termianl of Ubuntu:
-                 - run : source /opt/ros/humble/setup.bash -> tao moi truong ros2 cho ubuntu
-                 - run : export ROS_DOMAIN_ID=30
-                 - run : cd ~/carla-ros-bridge/src/ros-bridge/... go on folder have file progame control client
-                 - run : python3 ..... --host 172.27.224.1 --agent Basic --loop 
-  
-     
+# Driver Focus and Drowsiness Detection
+
+## Project Overview
+The main goal of this project is to detect driver lack of focus and drowsiness during driving simulation.
+
+This system is built using:
+- **CARLA 0.9.16**
+- **CARLA Python API**
+- **ROS 2**
+- **Ubuntu WSL**
+- **Windows CMD / Terminal**
+
+---
+
+## Requirements
+Before running the project, make sure the following software is installed:
+
+- [CARLA 0.9.16](https://carla.org/)
+- CARLA Python API
+- ROS 2
+- Ubuntu WSL
+- Python environment for the detection program
+
+---
+
+## How to Run the Project
+
+### Step 1: Run the detection program on Windows
+Open:
+- **Windows CMD / Terminal**
+- **Ubuntu WSL Terminal**
+
+In the **Windows terminal**, run:
+
+```bash
+cd C:\pixi_ws
+pixi shell
+call C:\pixi_ws\ros2-windows\local_setup.bat
