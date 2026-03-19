@@ -36,10 +36,30 @@ In the **Windows terminal**, run:
 cd C:\pixi_ws
 pixi shell
 call C:\pixi_ws\ros2-windows\local_setup.bat
-### Step 2: Connect client with server.
-Open:
--**Unbuntu Terminal
-In the **Unbuntu terminal**, run:
-'''bash
+
+cd Code_Detect_Face
+set ROS_DOMAIN_ID=30
+python ver_test.py
+```
+### Step 2: initialization server.
+
+Run the CARLA server:
+```bash
+ CarlaUE4.exe
+```
+Connect to server on Ubuntu:
+```bash
 source ~/carla-ros-bridge/install/setup.bash
 ros2 launch carla_ros_bridge carla_ros_bridge.launch.py synchronous_mode:=Fasle  host:=172.27.224.1 passive:=true
+```
+### Step 3: Control client on server by ROS-Bridge.
+Open: 
+Terminal Unbuntu.
+- Run:
+  ```bash
+  source /opt/ros/humble/setup.bash
+  export ROS_DOMAIN_ID=30
+  cd ~/carla-ros-bridge/src/ros-bridge/Code_Control_Client
+  python3 control_client_carla.py
+  ```
+  
